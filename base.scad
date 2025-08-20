@@ -223,7 +223,7 @@ pcb_loc_y = 19; //[0:.01:300]
 // sbc location z axis
 pcb_loc_z = 0; //[0:.01:100]
 // additional x axis case size
-case_offset_x = 2; //[0:.01:300]
+case_offset_x = 3; //[0:.01:300]
 // additional y axis case size
 case_offset_y = 19; //[0:.01:300]
 // additional z axis case top size

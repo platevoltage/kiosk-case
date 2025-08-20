@@ -1,8 +1,8 @@
 include <./base.scad>;
 $fn = 100;
 
-sbc_off = false;
-accessory_name = "rpi5_m2hat";
+// sbc_off = false;
+// accessory_name = "rpi5_m2hat";
 
 translate([ -30, 22, -34 ])
 difference()
@@ -19,8 +19,8 @@ difference()
 				base(sbc_off, accessory_name);
 
 				// fan holder
-				translate([ 38, 0, 10 ])
-				linear_extrude(h = 20) square([ 34, 10 ]);
+				translate([ 38, 0, -8 ])
+				linear_extrude(h = 46) square([ 34, 18 ]);
 			}
 
 			union()
@@ -29,15 +29,15 @@ difference()
 				linear_extrude(h = 2) square([ 98, 98 ]);
 
 				translate([ 0, 0, -34 ])
-				linear_extrude(h = 40) square([ 87, 75 ]);
+				linear_extrude(h = 38) square([ 87, 75 ]);
 
 				translate([ 4, -7, -26 ])
 				linear_extrude(h = 55) offset(4) offset(-4) square([ 33, 16 ]);
 
-				translate([ 90, 58, 10 ])
+				translate([ 92, 58, 10 ])
 				linear_extrude(h = 17) square([ 10, 16 ]);
 
-				translate([ 90, 40, 10 ])
+				translate([ 92, 40, 10 ])
 				linear_extrude(h = 17) square([ 10, 16 ]);
 
 				// fancutout
@@ -47,10 +47,10 @@ difference()
 				// linear_extrude(h = 20) circle(r = 12);
 
 				// fan holder
-				translate([ 40, 0, 8 ])
-				linear_extrude(h = 22) square([ 30, 8 ]);
-				translate([ 42, 0, 8 ])
-				linear_extrude(h = 22) square([ 26, 12 ]);
+				translate([ 40, 0, -8 ])
+				linear_extrude(h = 45) square([ 30, 8 ]);
+				translate([ 42, 0, -8 ])
+				linear_extrude(h = 45) square([ 26, 19 ]);
 			}
 		}
 
