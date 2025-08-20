@@ -53,27 +53,30 @@ difference()
 		}
 
 		// fastener with channel
-		translate([ -16, -6, -8 ])
+		translate([ -16, -8, -8 ])
 		difference()
 		{
 			union()
 			{
 				translate([ 56, -10, -23 ])
 				rotate([ 0, 0, 180 ])
-				linear_extrude(h = 60, scale = [ 1, .8 ]) offset(4) offset(-4) square([ 39, 17 ]);
+				linear_extrude(h = 60, scale = [ 1, .9 ]) offset(4) offset(-4) square([ 39, 17 ]);
 
 				translate([ 56, -11, 37 ])
 				rotate([ 180, 180, 0 ])
-				linear_extrude(h = 5, scale = [ 1, .3 ]) offset(4) offset(-4) square([ 39, 12 ]);
+				linear_extrude(h = 5, scale = [ 1, .3 ]) offset(4) offset(-4) square([ 39, 14 ]);
 			}
 			union()
 			{
-				translate([ 56, -6, -14 ])
+				translate([ 56, -4, -14 ])
 				rotate([ 0, 0, 180 ])
 				linear_extrude(h = 56) square([ 39, 10 ]);
+				translate([ 56, -6, -14 ])
+				rotate([ 0, 0, 180 ])
+				linear_extrude(h = 22) square([ 39, 10 ]);
 				translate([ 53, -8, -20 ])
 				rotate([ 0, 0, 180 ])
-				linear_extrude(h = 56, scale = [ 1, .8 ]) offset(2) offset(-2) square([ 33, 14 ]);
+				linear_extrude(h = 56, scale = [ 1, .9 ]) offset(2) offset(-2) square([ 33, 14 ]);
 			}
 		}
 
