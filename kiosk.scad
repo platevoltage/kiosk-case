@@ -17,9 +17,8 @@ difference()
 				sbc_case_builder();
 
 				// fan holder
-				// translate([ 38, 0, 20 ])
-				// // rotate([ 90, 0, 0 ])
-				// linear_extrude(h = 10) square([ 34, 5 ]);
+				translate([ 38, 0, 10 ])
+				linear_extrude(h = 20) square([ 34, 10 ]);
 			}
 
 			union()
@@ -40,16 +39,16 @@ difference()
 				linear_extrude(h = 17) square([ 10, 16 ]);
 
 				// fancutout
-				// translate([ 54, 0, 18 ])
+				translate([ 42, 0, 5 ])
+				vent_hex(15, 10, 12, 2, 1.5, "vertical");
 				// rotate([ 90, 0, 0 ])
 				// linear_extrude(h = 20) circle(r = 12);
 
 				// fan holder
-				// translate([ 40, 4, 20 ])
-				// linear_extrude(h = 5) square(30);
-
-				// translate([ 41, 10, 20 ])
-				// linear_extrude(h = 10) square(28);
+				translate([ 40, 0, 8 ])
+				linear_extrude(h = 22) square([ 30, 8 ]);
+				translate([ 42, 0, 8 ])
+				linear_extrude(h = 22) square([ 26, 12 ]);
 			}
 		}
 
