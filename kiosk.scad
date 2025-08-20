@@ -1,6 +1,8 @@
-include <./sbc_case_builder.scad>;
-
+include <./base.scad>;
 $fn = 100;
+
+sbc_off = false;
+accessory_name = "rpi5_m2hat";
 
 translate([ -30, 22, -34 ])
 difference()
@@ -14,7 +16,7 @@ difference()
 		{
 			union()
 			{
-				sbc_case_builder();
+				base(sbc_off, accessory_name);
 
 				// fan holder
 				translate([ 38, 0, 10 ])
@@ -76,7 +78,7 @@ difference()
 				linear_extrude(h = 22) square([ 39, 10 ]);
 				translate([ 53, -8, -20 ])
 				rotate([ 0, 0, 180 ])
-				linear_extrude(h = 56, scale = [ 1, .9 ]) offset(2) offset(-2) square([ 33, 14 ]);
+				linear_extrude(h = 56, scale = [ 1, .9 ]) offset(2) offset(-2) square([ 33, 18 ]);
 			}
 		}
 
