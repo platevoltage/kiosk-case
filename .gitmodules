@@ -1,0 +1,3 @@
+[submodule "SBC_Case_Builder"]
+	path = SBC_Case_Builder
+	url = https://github.com/hominoids/SBC_Case_Builder.git
