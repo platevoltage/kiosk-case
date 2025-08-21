@@ -19,8 +19,8 @@ difference()
 				base(sbc_off, accessory_name);
 
 				// fan holder
-				translate([ 38, 0, -8 ])
-				linear_extrude(h = 46) square([ 34, 18 ]);
+				translate([ 38, -2, 1 ])
+				linear_extrude(h = 37) square([ 34, 20 ]);
 			}
 
 			union()
@@ -47,9 +47,9 @@ difference()
 				// linear_extrude(h = 20) circle(r = 12);
 
 				// fan holder
-				translate([ 40, 0, -8 ])
+				translate([ 40, 0, -9 ])
 				linear_extrude(h = 45) square([ 30, 8 ]);
-				translate([ 42, 0, -8 ])
+				translate([ 42, 0, -9 ])
 				linear_extrude(h = 45) square([ 26, 19 ]);
 			}
 		}
@@ -79,6 +79,9 @@ difference()
 				translate([ 53, -8, -20 ])
 				rotate([ 0, 0, 180 ])
 				linear_extrude(h = 56, scale = [ 1, 1 ]) offset(2) offset(-2) square([ 33, 18 ]);
+
+				translate([ 46, -20, -30 ])
+				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 5, 2 ]);
 			}
 		}
 
@@ -89,15 +92,22 @@ difference()
 			union()
 			{
 
-				translate([ 26, 56, -23 ])
-				linear_extrude(h = 28) offset(1) offset(-1) square([ 30, 6 ]);
+				translate([ 26, 56, -26 ])
+				linear_extrude(h = 32) offset(1) offset(-1) square([ 30, 6 ]);
 
-				translate([ 26, 59, 5 ])
+				translate([ 26, 59, 6 ])
 				linear_extrude(h = 4, scale = [ 1, .3 ]) offset(1) offset(-1) square([ 30, 3 ]);
 			}
 
-			translate([ 26, 55, -19 ])
-			linear_extrude(h = 24) square([ 30, 4 ]);
+			union()
+			{
+				translate([ 28, 54, -22 ])
+				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 5, 4 ]);
+				translate([ 28, 58, -30 ])
+				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 5, 2 ]);
+				translate([ 26, 55, -19 ])
+				linear_extrude(h = 26) square([ 30, 4 ]);
+			}
 		}
 
 		//
