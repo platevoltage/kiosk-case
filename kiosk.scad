@@ -16,6 +16,7 @@ difference()
 		{
 			union()
 			{
+				translate([ -15, 0, 0 ])
 				base(sbc_off, accessory_name);
 
 				// fan holder
@@ -25,11 +26,11 @@ difference()
 
 			union()
 			{
-				translate([ -4, -6 ])
-				linear_extrude(h = 2) square([ 98, 98 ]);
+				translate([ -19, -6 ])
+				linear_extrude(h = 2) square([ 113, 98 ]);
 
-				translate([ 0, 0, -34 ])
-				linear_extrude(h = 38) square([ 87, 75 ]);
+				translate([ -15, 0, -34 ])
+				linear_extrude(h = 38) square([ 102, 75 ]);
 
 				translate([ 4, -7, -26 ])
 				linear_extrude(h = 55) offset(4) offset(-4) square([ 33, 16 ]);
@@ -62,11 +63,11 @@ difference()
 			{
 				translate([ 56, -10, -23 ])
 				rotate([ 0, 0, 180 ])
-				linear_extrude(h = 60, scale = [ 1, 1 ]) offset(4) offset(-4) square([ 39, 17 ]);
+				linear_extrude(h = 60, scale = [ 1, 1 ]) offset(4) offset(-4) square([ 39, 18 ]);
 
 				translate([ 56, -11, 37 ])
 				rotate([ 180, 180, 0 ])
-				linear_extrude(h = 5, scale = [ 1, .2 ]) offset(4) offset(-4) square([ 39, 16 ]);
+				linear_extrude(h = 5, scale = [ 1, .2 ]) offset(4) offset(-4) square([ 39, 17 ]);
 			}
 			union()
 			{
