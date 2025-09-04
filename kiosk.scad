@@ -20,7 +20,7 @@ difference()
 
 				// fan holder
 				translate([ 38, -2, 1 ])
-				linear_extrude(h = 37) square([ 34, 20 ]);
+				linear_extrude(h = 37) square([ 35, 20 ]);
 			}
 
 			union()
@@ -48,9 +48,9 @@ difference()
 
 				// fan holder
 				translate([ 40, 0, -9 ])
-				linear_extrude(h = 45) square([ 30, 8 ]);
+				linear_extrude(h = 45) square([ 31, 8 ]);
 				translate([ 42, 0, -9 ])
-				linear_extrude(h = 45) square([ 26, 19 ]);
+				linear_extrude(h = 45) square([ 27, 19 ]);
 			}
 		}
 
