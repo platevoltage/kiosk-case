@@ -20,8 +20,8 @@ difference()
 				base(sbc_off, accessory_name);
 
 				// fan holder
-				translate([ 38, -2, 1 ])
-				linear_extrude(h = 37) square([ 35, 20 ]);
+				// translate([ 38, -2, 1 ])
+				// linear_extrude(h = 37) square([ 35, 20 ]);
 			}
 
 			union()
@@ -42,16 +42,24 @@ difference()
 				linear_extrude(h = 17) square([ 10, 16 ]);
 
 				// fancutout
-				translate([ 42, 0, 5 ])
-				vent_hex(15, 10, 12, 2, 1.5, "vertical");
-				// rotate([ 90, 0, 0 ])
-				// linear_extrude(h = 20) circle(r = 12);
+				// translate([ 42, 0, 5 ])
+				// vent_hex(15, 10, 12, 2, 1.5, "vertical");
 
 				// fan holder
-				translate([ 40, 0, -9 ])
-				linear_extrude(h = 45) square([ 31, 8 ]);
-				translate([ 42, 0, -9 ])
-				linear_extrude(h = 45) square([ 27, 19 ]);
+				// translate([ 40, 0, -9 ])
+				// linear_extrude(h = 45) square([ 31, 8 ]);
+				// translate([ 42, 0, -9 ])
+				// linear_extrude(h = 45) square([ 27, 19 ]);
+
+				// power hole
+				translate([ -8, 10, 18 ])
+				rotate([ 90, 90, 0 ])
+				linear_extrude(h = 37) circle(r = 6);
+
+				// button hole
+				translate([ 80, 10, 18 ])
+				rotate([ 0, 90, 0 ])
+				linear_extrude(h = 37) circle(r = 6);
 			}
 		}
 
