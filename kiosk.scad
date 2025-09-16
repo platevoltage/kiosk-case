@@ -31,7 +31,7 @@ difference()
 				translate([ -15, 0, -34 ])
 				linear_extrude(h = 38) square([ 102, 75 ]);
 
-				translate([ 4, -7, -26 ])
+				translate([ 24, -7, -26 ])
 				linear_extrude(h = 55) offset(4) offset(-4) square([ 33, 16 ]);
 
 				translate([ 86, 58, 10 ])
@@ -51,9 +51,9 @@ difference()
 				// linear_extrude(h = 45) square([ 27, 19 ]);
 
 				// power hole
-				translate([ -8, 10, 18 ])
+				translate([ 13, 10, 13 ])
 				rotate([ 90, 90, 0 ])
-				linear_extrude(h = 37) circle(r = 6);
+				linear_extrude(h = 37) circle(r = 8);
 
 				// button hole
 				translate([ 80, 10, 18 ])
@@ -66,7 +66,7 @@ difference()
 		linear_extrude(h = 9) square([ 2, 18 ]);
 
 		// fastener with channel
-		translate([ -16, -8, -8 ])
+		translate([ 4, -8, -8 ])
 		difference()
 		{
 			union()
@@ -91,8 +91,8 @@ difference()
 				rotate([ 0, 0, 180 ])
 				linear_extrude(h = 56, scale = [ 1, 1 ]) offset(2) offset(-2) square([ 33, 18 ]);
 
-				translate([ 46, -20, -30 ])
-				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 5, 2 ]);
+				translate([ 26, -20, -30 ])
+				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 6, 2 ]);
 			}
 		}
 
@@ -113,9 +113,9 @@ difference()
 			union()
 			{
 				translate([ 28, 54, -22 ])
-				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 5, 4 ]);
+				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 6, 4 ]);
 				translate([ 28, 58, -30 ])
-				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 5, 2 ]);
+				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 6, 2 ]);
 				translate([ 26, 55, -19 ])
 				linear_extrude(h = 26) square([ 30, 4 ]);
 			}
