@@ -1,8 +1,8 @@
 include <./base.scad>;
 $fn = 100;
 
-// sbc_off = false;
-// accessory_name = "rpi5_m2hat";
+sbc_off = false;
+accessory_name = "rpi5_m2hat";
 
 translate([ -30, 22, -34 ])
 difference()
@@ -18,7 +18,6 @@ difference()
 			{
 				translate([ -15, 0, 0 ])
 				base(sbc_off, accessory_name);
-
 				// fan holder
 				// translate([ 38, -2, 1 ])
 				// linear_extrude(h = 37) square([ 35, 20 ]);
@@ -62,6 +61,9 @@ difference()
 				linear_extrude(h = 37) circle(r = 6);
 			}
 		}
+		translate([ 91, 38, 17 ])
+		// translate([ 91, 38, 7 ])
+		linear_extrude(h = 9) square([ 2, 18 ]);
 
 		// fastener with channel
 		translate([ -16, -8, -8 ])
