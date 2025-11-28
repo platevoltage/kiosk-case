@@ -219,13 +219,13 @@ rack_bay6_rear_conduit = "none"; //["none","conduit","grommet","grommets-vertica
 // sbc location x axis
 pcb_loc_x = 1; //[0:.01:300]
 // sbc location y axis
-pcb_loc_y = 19; //[0:.01:300]
+pcb_loc_y = 0; //[0:.01:300]
 // sbc location z axis
 pcb_loc_z = 0; //[0:.01:100]
 // additional x axis case size
 case_offset_x = 2; //[0:.01:300]
 // additional y axis case size
-case_offset_y = 19; //[0:.01:300]
+case_offset_y = 0; //[0:.01:300]
 // additional z axis case top size
 case_offset_tz = 9; //[-50:.01:300]
 // additional z axis case bottom size
@@ -280,7 +280,7 @@ gpio_opening = "default"; // [default,none,open,block,knockout,vent]
 // uart opening
 uart_opening = "default"; // [default,none,open,knockout]
 // enable indentations around io openings
-indents = false;
+indents = true;
 // nas sbc location
 nas_sbc_location = "top"; // ["top","bottom"]
 // number of nas drive bays
@@ -439,19 +439,19 @@ bottom_standoff_insert_height = 5.1; //.01
 
 /* [SBC Bottom Standoff Individual Settings] */
 // case bottom - rear left standoff settings
-bottom_rear_left_enable = false;
+bottom_rear_left_enable = true;
 bottom_rear_left_adjust = 0;       //[-30:.01:30]
 bottom_rear_left_support = "rear"; //[none,left,rear,front,right]
 // case bottom - upper left standoff settings
-bottom_front_left_enable = false;
+bottom_front_left_enable = true;
 bottom_front_left_adjust = 0;        //[-30:.01:30]
 bottom_front_left_support = "front"; //[none,left,rear,front,right]
 // case bottom - lower right standoff settings
-bottom_rear_right_enable = false;
+bottom_rear_right_enable = true;
 bottom_rear_right_adjust = 0;       //[-30:.01:30]
 bottom_rear_right_support = "rear"; //[none,left,rear,front,right]
 // case bottom - upper right standoff settings
-bottom_front_right_enable = false;
+bottom_front_right_enable = true;
 bottom_front_right_adjust = 0;        //[-30:.01:30]
 bottom_front_right_support = "front"; //[none,left,rear,front,right]
 
