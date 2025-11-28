@@ -217,13 +217,13 @@ rack_bay6_rear_conduit = "none"; //["none","conduit","grommet","grommets-vertica
 
 /* [3D Case Adjustments] */
 // sbc location x axis
-pcb_loc_x = 17; //[0:.01:300]
+pcb_loc_x = 1; //[0:.01:300]
 // sbc location y axis
 pcb_loc_y = 19; //[0:.01:300]
 // sbc location z axis
 pcb_loc_z = 0; //[0:.01:100]
 // additional x axis case size
-case_offset_x = 18; //[0:.01:300]
+case_offset_x = 2; //[0:.01:300]
 // additional y axis case size
 case_offset_y = 19; //[0:.01:300]
 // additional z axis case top size

@@ -1,8 +1,8 @@
 include <./base.scad>;
 $fn = 100;
 
-sbc_off = false;
-accessory_name = "rpi5_m2hat";
+// sbc_off = false;
+// accessory_name = "rpi5_m2hat";
 
 translate([ -30, 22, -34 ])
 difference()
@@ -21,6 +21,11 @@ difference()
 				// fan holder
 				// translate([ 38, -2, 1 ])
 				// linear_extrude(h = 37) square([ 35, 20 ]);
+
+				// power hole
+				translate([ -11, 17, 38 ])
+				rotate([ 90, 90, 0 ])
+				linear_extrude(h = 20) offset(2) offset(-2) square([ 32, 16 ]);
 			}
 
 			union()
@@ -29,15 +34,15 @@ difference()
 				linear_extrude(h = 2) square([ 113, 98 ]);
 
 				translate([ -15, 0, -34 ])
-				linear_extrude(h = 38) square([ 102, 75 ]);
+				linear_extrude(h = 38) square([ 87, 75 ]);
 
-				translate([ 24, -7, -26 ])
+				translate([ 8, -7, -26 ])
 				linear_extrude(h = 55) offset(4) offset(-4) square([ 33, 16 ]);
 
-				translate([ 86, 58, 10 ])
+				translate([ 66, 58, 10 ])
 				linear_extrude(h = 17) square([ 10, 16 ]);
 
-				translate([ 86, 40, 10 ])
+				translate([ 66, 40, 10 ])
 				linear_extrude(h = 17) square([ 10, 16 ]);
 
 				// fancutout
@@ -51,22 +56,21 @@ difference()
 				// linear_extrude(h = 45) square([ 27, 19 ]);
 
 				// power hole
-				translate([ 13, 10, 13 ])
+				translate([ -10, 18, 16 ])
 				rotate([ 90, 90, 0 ])
-				linear_extrude(h = 37) circle(r = 8);
+				linear_extrude(h = 27) offset(2) offset(-2) square([ 8, 14 ]);
 
 				// button hole
-				translate([ 80, 10, 18 ])
+				translate([ 50, 10, 18 ])
 				rotate([ 0, 90, 0 ])
 				linear_extrude(h = 37) circle(r = 6);
 			}
 		}
-		translate([ 91, 38, 17 ])
-		// translate([ 91, 38, 7 ])
+		translate([ 75, 38, 17 ])
 		linear_extrude(h = 9) square([ 2, 18 ]);
 
 		// fastener with channel
-		translate([ 4, -8, -8 ])
+		translate([ -12, -8, -8 ])
 		difference()
 		{
 			union()
@@ -91,13 +95,13 @@ difference()
 				rotate([ 0, 0, 180 ])
 				linear_extrude(h = 56, scale = [ 1, 1 ]) offset(2) offset(-2) square([ 33, 18 ]);
 
-				translate([ 26, -20, -30 ])
+				translate([ 34, -20, -30 ])
 				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 6, 2 ]);
 			}
 		}
 
 		// fastener without channel
-		translate([ 0, 0, -2 ])
+		translate([ -16, 0, -2 ])
 		difference()
 		{
 			union()
@@ -112,9 +116,9 @@ difference()
 
 			union()
 			{
-				translate([ 28, 54, -22 ])
+				translate([ 38, 54, -22 ])
 				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 6, 4 ]);
-				translate([ 28, 58, -30 ])
+				translate([ 38, 58, -30 ])
 				linear_extrude(h = 18, scale = [ 1, 1 ]) square([ 6, 2 ]);
 				translate([ 26, 55, -19 ])
 				linear_extrude(h = 26) square([ 30, 4 ]);

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris Game</title>
+    <style>
+        canvas {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="tetrisCanvas" width="400" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('tetrisCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const gridWidth = 10;
+        const gridHeight = 20;
+        const cellSize = 30;
+
+        let grid = Array.from({ length: gridHeight }, () => Array(gridWidth).fill(0));
+        function drawGrid() {
+            for (let row = 0; row < gridHeight; row++) {
+                for (let col = 0; col < gridWidth; col++) {
+                    ctx.fillStyle = grid[row][col] === 1 ? 'blue' : 'white';
+                    ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
+                }
+            }
+        }
+
+        function clearLine(row) {
+            for (let col = 0; col < gridWidth; col++) {
+                grid[row][col] = 0;
+            }
+        }
+
+        function checkLines() {
+            for (let row = 0; row < gridHeight; row++) {
+                if (grid[row].every(cell => cell !== 0)) {
+                    clearLine(row);
+                    for (let r = row - 1; r >= 0; r--) {
+                        for (let c = 0; c < gridWidth; c++) {
+                            grid[r + 1][c] = grid[r][c];
+                        }
+                    }
+                }
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawGrid();
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+        function drawGrid() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let row = 0; row < gridHeight; row++) {
+                for (let col = 0; col < gridWidth; col++) {
+                    if (grid[row][col] !== 0) {
+                        ctx.fillStyle = 'blue';
+                        ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
+                    }
+                }
+            }
+        }
+
+        function update() {
+            drawGrid();
+            requestAnimationFrame(update);
+        }
+
+        update();
+
+        // Tetris game logic goes here
+
+    </script>
+</body>
+
+</html>
