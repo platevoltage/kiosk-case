@@ -217,13 +217,13 @@ rack_bay6_rear_conduit = "none"; //["none","conduit","grommet","grommets-vertica
 
 /* [3D Case Adjustments] */
 // sbc location x axis
-pcb_loc_x = 1; //[0:.01:300]
+pcb_loc_x = 0; //[0:.01:300]
 // sbc location y axis
 pcb_loc_y = 0; //[0:.01:300]
 // sbc location z axis
-pcb_loc_z = 0; //[0:.01:100]
+pcb_loc_z = -0; //[0:.01:100]
 // additional x axis case size
-case_offset_x = 2; //[0:.01:300]
+case_offset_x = 0; //[0:.01:300]
 // additional y axis case size
 case_offset_y = 0; //[0:.01:300]
 // additional z axis case top size
@@ -253,8 +253,8 @@ front_cover_pattern = "solid"; //[solid,hex_5mm,hex_8mm,linear_vertical,linear_h
 // bottom cover pattern
 bottom_cover_pattern = "solid"; //[solid,hex_5mm,hex_8mm,linear_vertical,linear_horizontal,astroid]
 // heatsink opening
-cooling = "vent"; // [default,none,open,fan_open,fan_1,fan_2,fan_hex,vent,vent_hex_5mm,vent_hex_8mm,custom]
-fan_size = 25;    // [0,25,30,40,50,60,70,80,92]
+cooling = "vent_hex_5mm"; // [default,none,open,fan_open,fan_1,fan_2,fan_hex,vent,vent_hex_5mm,vent_hex_8mm,custom]
+fan_size = 25;            // [0,25,30,40,50,60,70,80,92]
 // number of rear fans for nas cases
 rear_fan = 1; // [1:2]
 // rear fan x-axis center
@@ -276,7 +276,7 @@ access_panel_rotation = 0;              //[0:90:270]
 
 /* [Options and Accessories] */
 // gpio opening
-gpio_opening = "default"; // [default,none,open,block,knockout,vent]
+gpio_opening = "none"; // [default,none,open,block,knockout,vent]
 // uart opening
 uart_opening = "default"; // [default,none,open,knockout]
 // enable indentations around io openings
@@ -319,7 +319,7 @@ sbc_top_standoffs = true;
 top_standoff_reverse = true;
 // enable wall support for standoffs
 top_sidewall_support = false;
-top_standoff_size = "custom";    //[m2_tap, m2, m2+, m2.5_tap, m2.5, m2.5+, m3_tap, m3, m3+, m4_tap, m4, m4+, custom]
+top_standoff_size = "m3_tap";    //[m2_tap, m2, m2+, m2.5_tap, m2.5, m2.5+, m3_tap, m3, m3+, m4_tap, m4, m4+, custom]
 top_standoff_type = "blind";     //[none, countersunk, recessed, nut holder, blind]
 top_standoff_pillar = "round";   //[hex, round]
 top_standoff_diameter = 6;       //[0:.01:10]
@@ -336,11 +336,11 @@ top_rear_left_enable = true;
 top_rear_left_adjust = -17.65;  //[-30:.01:30]
 top_rear_left_support = "rear"; //[none,left,rear,front,right]
 // case top - upper left standoff settings
-top_front_left_enable = true;
+top_front_left_enable = false;
 top_front_left_adjust = -17.65;   //[-30:.01:30]
 top_front_left_support = "front"; //[none,left,rear,front,right]
 // case top - lower right standoff settings
-top_rear_right_enable = true;
+top_rear_right_enable = false;
 top_rear_right_adjust = -17.65;  //[-30:.01:30]
 top_rear_right_support = "rear"; //[none,left,rear,front,right]
 // case top - upper right standoff settings
@@ -426,20 +426,20 @@ sbc_bottom_standoffs = true;
 bottom_standoff_reverse = false;
 // enable wall support for standoffs
 bottom_sidewall_support = false;
-bottom_standoff_size = "m3"; //[m2_tap, m2, m2+, m2.5_tap, m2.5, m2.5+, m3_tap, m3, m3+, m4_tap, m4, m4+, custom]
-bottom_standoff_type = "countersunk"; //[none, countersunk, recessed, nut holder, blind]
-bottom_standoff_pillar = "hex";       //[hex, round]
-bottom_standoff_diameter = 5.75;      //[2:.01:10]
-bottom_standoff_hole_size = 3.4;      //[0:.01:5]
-bottom_standoff_support_size = 10;    //[1:.01:25]
-bottom_standoff_support_height = 4;   //[0:.01:50]
+bottom_standoff_size = "custom";    //[m2_tap, m2, m2+, m2.5_tap, m2.5, m2.5+, m3_tap, m3, m3+, m4_tap, m4, m4+, custom]
+bottom_standoff_type = "recessed";  //[none, countersunk, recessed, nut holder, blind]
+bottom_standoff_pillar = "round";   //[hex, round]
+bottom_standoff_diameter = 5.75;    //[2:.01:10]
+bottom_standoff_hole_size = 3.4;    //[0:.01:5]
+bottom_standoff_support_size = 10;  //[1:.01:25]
+bottom_standoff_support_height = 4; //[0:.01:50]
 bottom_standoff_insert = false;
 bottom_standoff_insert_dia = 4.2;    //.01
 bottom_standoff_insert_height = 5.1; //.01
 
 /* [SBC Bottom Standoff Individual Settings] */
 // case bottom - rear left standoff settings
-bottom_rear_left_enable = true;
+bottom_rear_left_enable = false;
 bottom_rear_left_adjust = 0;       //[-30:.01:30]
 bottom_rear_left_support = "rear"; //[none,left,rear,front,right]
 // case bottom - upper left standoff settings
@@ -451,7 +451,7 @@ bottom_rear_right_enable = true;
 bottom_rear_right_adjust = 0;       //[-30:.01:30]
 bottom_rear_right_support = "rear"; //[none,left,rear,front,right]
 // case bottom - upper right standoff settings
-bottom_front_right_enable = true;
+bottom_front_right_enable = false;
 bottom_front_right_adjust = 0;        //[-30:.01:30]
 bottom_front_right_support = "front"; //[none,left,rear,front,right]
 
